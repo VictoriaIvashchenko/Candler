@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models;
+use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {
@@ -24,9 +25,9 @@ class MainController extends Controller
     }
 
     public static function authorisation_check(){
-        $nick = Models\Authorisation1::cut($_POST['nickname']);
-        $password = Models\Authorisation1::cut($_POST['password']);
-        Models\Authorisation1::auth($nick, $password);
+        $nick = Models\users::cut($_POST['nickname']);
+        $password = Models\users::cut($_POST['password']);
+        Models\users::auth($nick, $password);
         return redirect()->route('home')->with($_COOKIE);
     }
 }

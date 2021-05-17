@@ -50,8 +50,7 @@
                                     @if(isset($_COOKIE['user']))
                                     <ul class="second_lvl">
                                         <li id="welcome">
-                                             <span>Вітаю, {{$_COOKIE['name']}}</span>
-
+                                             <span>Вітаю, {{$name = DB::table('users')->where('login', $_COOKIE['login'])->value('name')}}</span>
                                         </li>
                                         <li class="text_account">
                                             Мій профіль
