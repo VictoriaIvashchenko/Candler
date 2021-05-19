@@ -71,149 +71,35 @@
                         <div><hr id="title_line"></div>
                     </div>
                     <div class="item_list">
-                        <div class="stuff">
+
+                        @foreach($stuffs = App\Models\Pages::find(1)->stuff as $stuff)
+                            <div class="stuff">
                             <div class="buttons">
                                 <img src="Images/item/like.svg" class="button_icon">
                                 <img src="Images/harder/compare.svg" class="button_icon">
                             </div>
                             <div class="pict">
-                                <img src="Images/парафін.jpg" class="img_stuff">
+                                <img src="{{$stuff->img}}" class="img_stuff">
                             </div>
-                            <a class="name_stuff" href="/Candler/public/parafin" id="link">
-                                Парафін П-2
+                            <a class="name_stuff" href="{{$stuff->link}}" id="link">
+                                {{$stuff->name}}
                             </a>
                             <div >
                                 <div class=" mark ">
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
+                                    @for($i = 1; $i <= $stuff->stars; $i++)
+                                        <span class="active"></span>
+                                    @endfor
+
+                                    @for($i = 1; $i <= 5 - $stuff->stars; $i++)
+                                            <span></span>
+                                        @endfor
                                 </div>
                             </div>
                             <div class="price">
-                                200 г - 30,00 грн
+                                {{$stuff->min}} г - {{$stuff->price}} грн
                             </div>
                         </div>
-                        <div class="stuff">
-                            <div class="buttons">
-                                <img src="Images/item/like.svg" class="button_icon">
-                                <img src="Images/harder/compare.svg" class="button_icon">
-                            </div>
-                            <div class="pict">
-                                <img src="Images/свічний_гель.PNG" class="img_stuff">
-                            </div>
-                            <a class="name_stuff">
-                                Свічний гель
-                            </a>
-                            <div >
-                                <div class=" mark ">
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                </div>
-                            </div>
-                            <div class="price">100 г - 52 грн
-                            </div>
-                        </div>
-                        <div class="stuff">
-                            <div class="buttons">
-                                <img src="Images/item/like.svg" class="button_icon">
-                                <img src="Images/harder/compare.svg" class="button_icon">
-                            </div>
-                            <div class="pict">
-                                <img src="Images/восковий%20клей.jpg" class="img_stuff">
-                            </div>
-                            <a class="name_stuff">
-                                Клей восковий
-                            </a>
-                            <div >
-                                <div class=" mark ">
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                </div>
-                            </div>
-                            <div class="price">
-                                10 г - 19 грн
-                            </div>
-                        </div>
-                        <div class="stuff">
-                            <div class="buttons">
-                                <img src="Images/item/like.svg" class="button_icon">
-                                <img src="Images/harder/compare.svg" class="button_icon">
-                            </div>
-                            <div class="pict">
-                                <img src="Images/вощина.jpg" class="img_stuff">
-                            </div>
-                            <a class="name_stuff">
-                                Натуральна вощина
-                            </a>
-                            <div >
-                                <div class=" mark ">
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                </div>
-                            </div>
-                            <div class="price">
-                                28 грн
-                            </div>
-                        </div>
-                        <div class="stuff">
-                            <div class="buttons">
-                                <img src="Images/item/like.svg" class="button_icon">
-                                <img src="Images/harder/compare.svg" class="button_icon">
-                            </div>
-                            <div class="pict">
-                                <img src="Images/соєвий.jpg" class="img_stuff">
-                            </div>
-                            <a class="name_stuff">
-                                Віск соєвий (без ГМО)
-                            </a>
-                            <div >
-                                <div class=" mark ">
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                </div>
-                            </div>
-                            <div class="price">
-                                100 г - 61 грн
-                            </div>
-                        </div>
-                        <div class="stuff">
-                            <div class="buttons">
-                                <img src="Images/item/like.svg" class="button_icon">
-                                <img src="Images/harder/compare.svg" class="button_icon">
-                            </div>
-                            <div class="pict">
-                                <img src="Images/vegan.jpg" class="img_stuff">
-                            </div>
-                            <a class="name_stuff">
-                                Віск білий Vegan
-                            </a>
-                            <div >
-                                <div class=" mark ">
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                </div>
-                            </div>
-                            <div class="price">
-                                50 г - 93 грн
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="pages">
                         <div class="page_swipe">

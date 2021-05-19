@@ -13,7 +13,8 @@ class MainController extends Controller
     }
 
     public static function candlebase(){
-        return view('catalog');
+
+        return view('catalog', ['data' => Models\Pages::all()]);
     }
 
     public static function item_1_1(){
