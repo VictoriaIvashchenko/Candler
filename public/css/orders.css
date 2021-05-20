@@ -38,7 +38,6 @@
     color: #2E4052;
 
 }
-
 #inst_icon{
     position: absolute;
     width: 28.82px;
@@ -71,7 +70,6 @@
     top: 96px;
     cursor: pointer;
 }
-
 .back_o {
     z-index:  -2;
     position: relative;
@@ -79,7 +77,6 @@
     height:221px;
     margin-left: 10px;
 }
-
 .bord_o{
     position: absolute;
     width: 180.96px;
@@ -99,4 +96,41 @@
     border: 1px solid #2E4052;
     box-sizing: border-box;
     border-radius: 15px;
+}
+
+.order_n{
+
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    background-color:  rgba(46, 64, 82, 0.13);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.title_n{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #412234;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.value{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2E4052;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.order_list{
+    display: flex;
+    flex-direction: column;
 }

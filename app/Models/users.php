@@ -18,10 +18,13 @@ class users extends Model
 
     public static function auth($login, $password){
         if(DB::selectOne("select id from users where login = ? and password = ?", [$login, $password])!=null) {
-            setcookie('user', 'online', time() + 130, '/');
-            setcookie('login', $login, time() + 130, '/');
+            setcookie('user', 'online', time() + 300, '/');
+            setcookie('login', $login, time() + 300, '/');
         }
     }
 
+    public function orders(){
+        return $this->belongsToMany('App\Models\Orders', 'user_order', 'user_id', 'order_id');
+    }
 
 }

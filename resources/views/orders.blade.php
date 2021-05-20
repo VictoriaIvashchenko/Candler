@@ -51,6 +51,7 @@
 
                     </div>
                 </div>
+
                 <div class="articls">
                     <div class="title_catalog">
                         <div class=" filter">
@@ -59,8 +60,60 @@
                         </div>
                         <div><hr id="title_line"></div>
                     </div>
-
+                    <div class="order_list">
+                        @foreach(\App\Models\users::find($id)->orders  as $order)
+                            <div class="order_n">
+                                <div class="num_order">
+                            <span class="title_n">
+                                № {{++$num}}
+                            </span>
+                                </div>
+                                <div class="name_ordered">
+                            <span class="value">
+                                @foreach(\App\Models\Orders::find($order->id)->stuff as $stuff)
+                                    {{$stuff->name}}
+                                @endforeach
+                            </span>
+                                </div>
+                                <div class="color">
+                            <span class="title_n">
+                                Колір:
+                            </span>
+                                    <span class="value">
+                                {{$order->color}}
+                            </span>
+                                </div>
+                                <div class="quality_ord">
+                                    <span class="title_n">
+                                        К-ть:
+                                    </span>
+                                    <span class="value">
+                                        {{$order->quality}}
+                                    </span>
+                                </div>
+                                <div class="cost_ord">
+                                    <span class="title_n">
+                                        Вартість:
+                                    </span>
+                                    <span class="value">
+                                        {{$order->cost}} грн
+                                    </span>
+                                </div>
+                                <div class="date_ord">
+                                    <span class="title_n">
+                                        Дата:
+                                    </span>
+                                    <span class="value">
+                                        {{$order->date}}
+                                    </span>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
+
+
+
             </div>
         </div>
     </div>

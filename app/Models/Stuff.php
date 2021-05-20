@@ -12,4 +12,8 @@ class Stuff extends Model
     public function page(){
         return $this->belongsTo(Pages::class, 'page_id', 'id');
     }
+
+    public function orders(){
+        return $this->belongsToMany('App\Models\Orders', 'stuff_order', 'stuff_id','order_id');
+    }
 }

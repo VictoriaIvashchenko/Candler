@@ -62,7 +62,7 @@ body {
   .img_logo {
     display: none;
   }
-  transition: all 0.5s;
+
 }
 @media (min-width: 701px) and (max-width: 1000px) {
   .button_text {
@@ -81,7 +81,6 @@ body {
   #logo_ {
     display: none;
   }
-  transition: all 0.5s;
 }
 @media screen and (max-width: 700px) {
   .left_menu {
@@ -141,7 +140,6 @@ body {
   .contat {
     display: none;
   }
-  transition: all 0.5s;
 }
 .text1 {
   font-family: Amatic SC;
@@ -1029,7 +1027,6 @@ close {
     justify-content: center;
     align-self: center;
   }
-  transition: all 0.5s;
 }
 #auth_logo {
   margin-left: 60px;

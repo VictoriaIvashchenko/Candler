@@ -13,7 +13,6 @@ class MainController extends Controller
     }
 
     public static function candlebase(){
-
         return view('catalog', ['data' => Models\Pages::all()]);
     }
 
@@ -22,7 +21,11 @@ class MainController extends Controller
     }
 
     public static function order(){
-        return view('orders');
+        $id = DB::table('users')->where('login', $_COOKIE['login'])->value('id');
+        $orders = Models\Orders::all();
+        $stuff = DB::table('stuffs')->value('name');
+        $num = 0;
+        return view('orders', compact('id','orders', 'stuff','num'));
     }
 
     public static function authorisation_check(){
@@ -31,4 +34,5 @@ class MainController extends Controller
         Models\users::auth($nick, $password);
         return redirect()->route('home')->with($_COOKIE);
     }
+
 }

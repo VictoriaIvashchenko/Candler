@@ -16,6 +16,7 @@ class CreateStuffsTable extends Migration
         Schema::create('stuffs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('img');
             $table->string('link');
             $table->integer('stars');
             $table->integer('min');
