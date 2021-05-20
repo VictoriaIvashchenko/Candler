@@ -12,8 +12,8 @@
             </div>
             <div class="main_cont">
                 <div class="left_menu">
-                    <div class="catalog">
-                        <div id="title_cat">Мій кабінет</div>
+                    <div class="catalog_o">
+                        <div id="title_cat_o">Мій кабінет</div>
                         <hr id="line">
                         <a class="text_cat">Мій профіль</a>
                         <a class="text_cat">Обране</a>
@@ -22,8 +22,8 @@
                         <a class="text_cat">мої замовлення</a>
                         <a class="text_cat">Вийти</a>
                     </div>
-                    <div class="soc_ad">
-                        <div id="title_ad">Шукайте нас в мережі </div>
+                    <div class="soc_ad_o">
+                        <div id="title_ad_o">Шукайте нас в мережі </div>
                         <div class="icons">
                             <a>
                                 <img src={{asset('Images/social/inst.svg')}} id="inst_icon" >
@@ -39,13 +39,13 @@
                             </a>
 
                         </div>
-                        <div class="back_">
+                        <div class="back_o">
                             <div class="circle1"></div>
                             <div class="circle2"></div>
                             <div class="circle3"></div>
                         </div>
-                        <div class="bord">
-                            <div class="bord_"> </div>
+                        <div class="bordo">
+                            <div class="bord_o"> </div>
 
                         </div>
 
@@ -54,7 +54,7 @@
                 <div class="articls">
                     <div class="title_catalog">
                         <div class=" filter">
-                            <div class="name_catal">Мій профіль</div>
+                            <div class="name_catal">Мої замовлення</div>
 
                         </div>
                         <div><hr id="title_line"></div>

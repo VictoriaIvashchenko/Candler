@@ -1,0 +1,102 @@
+.catalog_o{
+    width: 253px;
+    height: 322px;
+    background: #FFC857;
+    border: 1px solid #2E4052;
+    border-radius: 20px;
+}
+#title_cat_o{
+    width: 119px;
+    height: 45px;
+    margin-left: 15px;
+    font-family: Amatic SC;
+    margin-top: 5px;
+    font-size: 36px;
+    color: #412234;
+
+}
+.soc_ad_o{
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+#title_ad_o{
+    position: absolute;
+    width: 200px;
+    height: 26px;
+    left: 12px;
+    top: calc(50% - 26px/2 - 58.5px);
+
+    font-family: Amatic SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 25px;
+
+    text-align: center;
+
+    color: #2E4052;
+
+}
+
+#inst_icon{
+    position: absolute;
+    width: 28.82px;
+    height: 28px;
+    left: 14px;
+    top: 96px;
+    cursor: pointer;
+}
+#fb_icon{
+    position: absolute;
+    width: 28.82px;
+    height: 28px;
+    left: 70.06px;
+    top: 96px;
+    cursor: pointer;
+}
+#yt_icon{
+    position: absolute;
+    width: 28.82px;
+    height: 28px;
+    left: 126.54px;
+    top: 96px;
+    cursor: pointer;
+}
+#telegram_icon{
+    position: absolute;
+    width: 28.82px;
+    height: 28px;
+    left: 182.18px;
+    top: 96px;
+    cursor: pointer;
+}
+
+.back_o {
+    z-index:  -2;
+    position: relative;
+    width:209px;
+    height:221px;
+    margin-left: 10px;
+}
+
+.bord_o{
+    position: absolute;
+    width: 180.96px;
+    height: 20.89px;
+    left: 22.85px;
+    top: calc(50% - 20.89px/2 - 58.05px);
+    background: #FFFFFF;
+}
+.bordo {
+    z-index: -3;
+    position: absolute;
+    width: 250px;
+    height: 119.01px;
+    left: 0px;
+    top: calc(50% - 119.01px / 2 + 1px);
+
+    border: 1px solid #2E4052;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
